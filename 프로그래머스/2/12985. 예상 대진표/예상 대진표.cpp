@@ -15,10 +15,6 @@ int solution(int n, int a, int b)
     for(answer; answer<round; answer++) {
         int del = nA - nB;
         
-        cout << "nA: " << nA << endl;
-        cout << "nB: " << nB << endl;
-        cout << del << endl;
-        
         if(del == 1 && (nA % 2 == 0))
         {
             break;
