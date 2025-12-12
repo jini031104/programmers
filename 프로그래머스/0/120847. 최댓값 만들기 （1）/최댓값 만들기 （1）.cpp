@@ -15,6 +15,7 @@ int solution(vector<int> numbers) {
     }
     
     for(int i=0; i<numbers.size(); i++){
+        // [1, 1] = 1 << 처럼, 최대값들이 동일한 경우 인덱스를 비교하여 구한다.
         if(second_max < numbers[i] && i != max_index)
             second_max = numbers[i];
     }
