@@ -1,17 +1,14 @@
 #include <string>
 #include <vector>
+#include <cmath>
 
 using namespace std;
 
 int solution(int n) {
-    int answer = 2;
+    int answer = 0;
+    int a = sqrt(n);
     
-    for(int i=1; i<n; i++){
-        if(n == i*i){
-            answer = 1;
-            break;
-        }
-    }
+    answer = a * a == n ? 1:2;
     
     return answer;
 }
