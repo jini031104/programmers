@@ -1,10 +1,10 @@
 # [level 0] 제곱수 판별하기 - 120909 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120909?language=cpp) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120909?language=c) 
 
 ### 성능 요약
 
-메모리: 4.21 MB, 시간: 0.24 ms
+메모리: 4.2 MB, 시간: 0.02 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2026년 01월 05일 17:51:49
+2026년 01월 05일 17:58:11
 
 ### 문제 설명
 
