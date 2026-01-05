@@ -5,14 +5,9 @@ using namespace std;
 
 int solution(int hp) {
     int answer = 0;
-
-    answer = hp / 5;
-    hp %= 5;
-    
-    answer += hp / 3;
-    hp %= 3;
-    
-    answer += hp;
-    
+    for(int i=5;i>0;i-=2) {
+        answer += hp/i;
+        hp=hp%i;
+    }
     return answer;
 }
