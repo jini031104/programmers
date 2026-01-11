@@ -5,20 +5,12 @@ using namespace std;
 
 string solution(string my_string) {
     string answer = "";
-    string m = "aeiou";
-    
-    for(int i=0; i<my_string.size(); i++){
-        int same = false;
-        for(int j=0; j<m.size(); j++){
-            if(my_string[i] == m[j])
-                same = true;
+    for(const auto v : my_string)
+    {
+        if( v != 'a' && v != 'e' && v != 'i' && v != 'o' && v != 'u')
+        {
+            answer += v;
         }
-        
-        if(same == true)
-            continue;
-        
-        answer += my_string[i];
     }
-    
     return answer;
 }
