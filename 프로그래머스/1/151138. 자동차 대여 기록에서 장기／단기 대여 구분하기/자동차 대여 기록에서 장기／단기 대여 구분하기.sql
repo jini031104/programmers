@@ -1,0 +1,8 @@
+-- 코드를 입력하세요
+SELECT *, CASE
+            WHEN 29 <= DATEDIFF(END_DATE, START_DATE) THEN '장기 대여'
+            ELSE '단기 대여'
+            END as RENT_TYPE
+FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+WHERE MONTH(START_DATE) = 9 AND YEAR(START_DATE) = 2022
+ORDER BY history_id DESC;
