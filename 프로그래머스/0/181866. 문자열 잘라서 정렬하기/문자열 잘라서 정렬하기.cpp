@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <sstream>
 
 using namespace std;
 
@@ -9,20 +10,15 @@ vector<string> solution(string myString) {
     string s = "";
     
     for(int i=0; i<myString.length(); i++){
-        if(myString[i] == 'x') {
-            if(s != "") {
-                answer.push_back(s);
-                s = "";
-            }
-            continue;
-        }
-        else {
-            s += myString[i];
-        }
+        myString[i] != 'x' ? s += myString[i] : s += ' ';
     }
     
-    if(s != "")
-        answer.push_back(s);
+    string test;
+    stringstream stream;
+    stream.str(s);
+    
+    while (stream >> test)
+        answer.push_back(test);
     
     sort(answer.begin(), answer.end());
     
