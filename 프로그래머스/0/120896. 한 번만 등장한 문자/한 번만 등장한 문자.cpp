@@ -1,28 +1,23 @@
-#include <algorithm>
 #include <string>
 #include <vector>
-#include <iostream>
-
+#include <map>
 using namespace std;
 
 string solution(string s) {
     string answer = "";
-    sort(s.begin(), s.end());
-    char test = s[0];
-    int count = 1;
-    
-    for(int i=1; i<s.size(); i++){
-        if(test != s[i]){
-            if(count == 1)
-                answer += test;
-            test = s[i];
-            count = 1;
-        } else {
-            count++;
+
+    map<char,int> m;
+    for(const auto v : s)
+    {
+        m[v]++;
+    }
+
+    for(const auto& v : m)
+    {
+        if(v.second == 1)
+        {
+            answer.push_back(v.first);
         }
     }
-    if(count == 1)
-        answer += test;
-    
     return answer;
 }
